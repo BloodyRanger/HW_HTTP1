@@ -35,7 +35,7 @@ public class Main {
             });
 
             Stream<Cat> stream = cats.stream();
-            stream.filter(value -> value.getUpvotes() > 0)
+            stream.filter(value -> value.getUpvotes() != null && value.getUpvotes() > 0)
                     .forEach(System.out::println);
 
 
